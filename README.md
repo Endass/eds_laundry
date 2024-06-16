@@ -1,6 +1,11 @@
 # eds_laundry
 FiveM laundering script. Based on Ox lib.
 
+### Requirements:
+- ox_lib
+- ox_target
+- ox_inventory
+
 ### Features:
 - Translate everything.
 - Edit dirty to money multipler.
