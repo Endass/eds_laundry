@@ -6,44 +6,29 @@ FiveM laundering script. Based on Ox lib.
 - Edit dirty to money multipler.
 - Skill check before using.
 - Animation while washing.
+- Toggle skill check.
+- Change progressbar time.
 
 Config.lua:
 ```lua
+lib.locale()
 Config = {}
 
-Config.FianalMultipler = 0.7 -- INT | Set's multipler for dirty to clean money.
+Config.FinalMultiplerMIN = 60 -- INT | Set minimum multipler in percents.
+Config.FinalMultiplerMAX = 90 -- INT | Set maximum multipler in percents.
+
+Config.EnableSkillCheck = true -- BOLEAN | Enable skill check.
+
+Config.ProgressBarTimeMutli = true -- BOLEAN | Multiply washing amount with "Config.ProgressBarTime" for new time for progressbar.
+Config.ProgressBarTime = 100 -- INT | Time to wash in ms.
 
 
-Lang = {}
-
--- TARGET BUTTON
-Lang.TgbtLabel = "Money Washer"
-
--- CANCEL
-Lang.CancTitle = "Canceled"
-Lang.CancDesc = "You canceled the process!"
-Lang.CancType = "error"
-
--- NOT ENOUGH MONEY
-Lang.NemoTitle = "Not enough money"
-Lang.NemoDesc = "You do not have enough black money!"
-Lang.NemoType = "error"
-
--- SUCCED SKILL CHECK
-Lang.SschTitle = "Success"
-Lang.SschDesc = "Successfully did the skill check!"
-Lang.SschType = "success"
-
--- INPUT DIALOG
-Lang.InpdTitle = "Money Washer"
-Lang.InpdQues = "How much to wash?"
-Lang.InpdIcon = "hashtag"
-
--- PROGRESS BAR
-Lang.PrgbLabel = "Washing money..."
-
--- FINAL MSG
-Lang.FinlTitle = "Finished"
-Lang.FinlDesc = "You successfully finished washing your dirty money!"
-Lang.FinlType = "success"
+-- WASHING MACHINES:
+Config.Wm1Coords = vec3(1135.75, -992.2, 46.25) -- VECTOR3 | Washing machine 1 coordinates.
+Config.Wm2Coords = vec3(1135.75, -990.85, 46.25) -- VECTOR3 | Washing machine 2 coordinates.
+Config.Wm3Coords = vec3(1135.65, -989.55, 46.25) -- VECTOR3 | Washing machine 3 coordinates.
+Config.Wm4Coords = vec3(1135.45, -988.2, 46.25) -- VECTOR3 | Washing machine 4 coordinates.
+Config.WmRadius = 0.45 -- INT | All washing machines' sphere's radius.
+Config.WmIntDistance = 0.9 -- INT | All washning machines' distance to interract.
+Config.WmIntIcon = "fa-solid fa-money-bill-wave" -- STR | Icon for all washing machine's interaction button.
 ```
